@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Game</title>
+    <style>
+      input {
+        width: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>2 X 5 = <input id="q1" type="text" maxlength="2" /> <span>?</span></p>
+    <p>3 X 6 = <input id="q2" type="text" maxlength="2" /> <span>?</span></p>
+    <p>4 X 8 = <input id="q3" type="text" maxlength="2" /> <span>?</span></p>
+    <p>9 X 5 = <input id="q4" type="text" maxlength="2" /> <span>?</span></p>
+    <button onclick="checkingScore()">Check Answers</button>
+
+    <script>
+      let ans1 = 10;
+      let ans2 = 18;
+      let ans3 = 32;
+      let ans4 = 45;
+
+      function checkingScore() {
+        let score = 0;
+        let q1Value = document.getElementById("q1").value;
+
+        if (q1Value == ans1) {
+          score++;
+        } else {
+          score--;
+        }
+
+        let q2Value = document.getElementById("q2").value;
+
+        if (q2Value == ans2) {
+          score++;
+        } else {
+          score--;
+        }
+
+        let q3Value = document.getElementById("q3").value;
+
+        if (q3Value == ans3) {
+          score++;
+        } else {
+          score--;
+        }
+
+        let q4Value = document.getElementById("q4").value;
+
+        if (q4Value == ans4) {
+          score++;
+        } else {
+          score--;
+        }
+
+        console.log("Your total score is", score);
+      }
+    </script>
+  </body>
+</html>
