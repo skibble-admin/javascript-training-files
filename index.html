@@ -27,7 +27,6 @@
       sizes="16x16"
       type="image/png"
     />
-
     <link rel="icon" href="https://www.skibble.tech/images/favicon.ico" />
   </head>
   <body>
@@ -54,22 +53,20 @@
           >
             Submit Homework
           </a>
-        
         </div>
-       
       </div>
     </div>
     <!-- https://skibble505-my.sharepoint.com/:v:/g/personal/admin_skibble_tech/EbkvvPSyVd1BkA9WYz4P3RkBaxqRbyZbT-4yUn-ygfIACQ?e=aF1dtF&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZyIsInJlZmVycmFsQXBwUGxhdGZvcm0iOiJXZWIiLCJyZWZlcnJhbE1vZGUiOiJ2aWV3In19 -->
     <div class="container">
-        <div class="p-2 text-center">
-            <div class="alert alert-info" role="alert">
-                This week champion student is <b>Sumanth</b>
-              </div>
+      <div class="p-2 text-center">
+        <div class="alert alert-info" role="alert">
+          This week champion student is <b>Sumanth</b>
         </div>
-   
+      </div>
     </div>
     <div class="container">
       <div class="list-group">
+        <session> </session>
         <a
           href="https://skibble505-my.sharepoint.com/:v:/g/personal/admin_skibble_tech/Edj9NBBDXAZNhWiyz-qD7gIByBRQcA_gNckRaxgLJstTZQ?e=XC8W7D&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZyIsInJlZmVycmFsQXBwUGxhdGZvcm0iOiJXZWIiLCJyZWZlcnJhbE1vZGUiOiJ2aWV3In19"
           class="list-group-item list-group-item-action"
@@ -106,7 +103,7 @@
             <h5 class="mb-1">Week 3- JavaScript and Responsive Web Design</h5>
             <small>
               <span class="badge bg-primary rounded-pill"
-                >Live on Sat, 23 September 2023</span
+                >Live on 7 PM IST, 23 September 2023</span
               >
             </small>
           </div>
@@ -116,9 +113,63 @@
           </p>
           <small>Live</small>
         </a>
+        <a
+          href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDhlYjZiMWItMTNjNi00MjQwLThmYTktMTZjYjJmNmI5NjEy%40thread.v2/0?context=%7b%22Tid%22%3a%221908139a-afa2-4bcc-ae92-60f64012c58a%22%2c%22Oid%22%3a%2260778493-0a8c-4d0e-bac6-f554f4224abf%22%7d"
+          class="list-group-item list-group-item-action"
+          aria-current="true"
+        >
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">
+              Week 4 - JavaScript Functional Programming and Events
+            </h5>
+            <small>
+              <span class="badge bg-primary rounded-pill"
+                >Live on 7 PM IST, 30 September 2023</span
+              >
+            </small>
+          </div>
+          <p class="mb-1">
+            Functional programming in JS, Deepdive in Events, and Working with
+            Forms
+          </p>
+          <small>Live</small>
+        </a>
+
+        <a
+          href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDhlYjZiMWItMTNjNi00MjQwLThmYTktMTZjYjJmNmI5NjEy%40thread.v2/0?context=%7b%22Tid%22%3a%221908139a-afa2-4bcc-ae92-60f64012c58a%22%2c%22Oid%22%3a%2260778493-0a8c-4d0e-bac6-f554f4224abf%22%7d"
+          class="list-group-item list-group-item-action"
+          aria-current="true"
+        >
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Week 5 - Asynchronous JavaScript</h5>
+            <small>
+              <span class="badge bg-primary rounded-pill"
+                >Live on 7 PM IST, 7 October 2023 </span
+              >
+            </small>
+          </div>
+          <p class="mb-1">
+            Modules, Async JS Callbacks, setTimeout, Promise, Async Functions,
+            The event loop mechanism, HTTP Methods, Fetch API- Networking
+          </p>
+          <small>Live</small>
+        </a>
       </div>
     </div>
-
+    <template id="session-template">
+      <a
+        id="link"
+        class="list-group-item list-group-item-action"
+        aria-current="true"
+      >
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1"><slot name="title"></slot></h5>
+          <small><slot name="small-text"></slot> </small>
+        </div>
+        <p class="mb-1"><slot name="topics"></slot></p>
+        <small><slot name="state"></slot></small>
+      </a>
+    </template>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
