@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>JS 103</title>
+</head>
+
+<body>
+    <script>
+        //control flow
+
+    
+
+        /*   let hour = 22;
+        if ( hour > 0 && hour < 12 ) {
+          document.write("Good Morning");
+  
+        } else if( hour > 12 && hour <= 16 ) {
+  
+          document.write("Good Afternoon");
+  
+        }else{
+          document.write("Good Evening");
+        }
+  
+        let theDay = today.getDay();
+  
+        switch (theDay) {
+          case 1:
+            theDay = "Sunday";
+            break;
+  
+          case 2:
+            theDay = "Monday";
+            break;
+  
+          case 6:
+            theDay = "Saturday";
+            break;
+          default:
+            theDay = "I don't know!";
+        }
+         console.log(theDay);
+         */
+
+        // Falsy
+        //null
+        // ''
+        // undefined
+        // console.log( 'user' && "Arun" && "Ganesh")
+
+        // console.log( 'Bharathi' || "Arun" || "Raja" || "suman" || "Rakesh")
+
+        // Loops
+        let myArray = ["🥕", "🍎", " 🍊"];
+
+        for (let i = 0; i < myArray.length; i++) {
+            document.write(myArray[i]);
+        }
+
+        //   for (let value in myArray){
+        //    document.write(myArray[value]);
+        // }
+
+        /* let myObj = { name: "Ganesh", Age: 100, height: 10 };
+  
+        for (let key of Object.keys(myObj)) {
+          console.log(myObj[key]);
+        }
+  
+        document.write("<br/>");
+        document.write(myArray.length);
+        */
+
+        //ini,condition,iteration
+
+        //  let ganesh = ["Trainer", false, [345, 345, [345345, 45645]]];
+        let ganeshObject = {
+            name: "Ganesh",
+            profession: "Trainer",
+            hasCar: true,
+            account: ["asdf", 345, {}],
+        };
+
+        console.log(
+            "person name  is " +
+            ganeshObject.name +
+            " and person is  " +
+            ganeshObject.profession +
+            " " +
+            ganeshObject.hasCar +
+            " for the car"
+        );
+    </script>
+</body>
+
+</html>
