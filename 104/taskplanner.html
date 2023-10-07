@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Planner</title>
+</head>
+<style>
+    body,
+    html {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        height: 100%;
+
+    }
+
+    .header {
+        flex: 1;
+        max-height: 60px;
+        padding: 10px;
+
+    }
+
+    .list {
+        flex: 2;
+        margin-bottom: auto;
+        background-color: beige;
+        padding: 20px;
+    }
+
+    .footer {
+        flex: 1;
+        background-color: #e4e4e4;
+        padding: 20px;
+        max-height: 100px;
+
+    }
+
+    input {
+        height: 50px;
+        font-size: 24px;
+        width: 100%;
+    }
+</style>
+
+<body onload="updateUI()">
+
+    <dic class="container">
+        <div class="header">
+            <h1>Task Planner</h1>
+        </div>
+        <div class="list">
+            <ul id="taskContainer">
+
+            </ul>
+        </div>
+        <div class="footer">
+            <form>
+                <input required type="text" id="newTask" placeholder="New Task" />
+                <input required type="date" id="datetime" />
+                <button id="addTask">Add</button>
+            </form>
+        </div>
+        </div>
+
+        <script src="./task_planner.js"></script>
+</body>
+
+</html>
