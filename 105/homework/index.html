@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let getPhotos = async (url) => {
+
+            try {
+
+                let res = await fetch(url);
+
+                if (res.status != 200) {
+                    throw new Error("The request is failed to resolve.");
+                }
+
+                let data = await res.json();
+
+                return data;
+            } catch (error) {
+
+                return error.message;
+            }
+        };
+        let photos = "https://jsonplaceholder.typicode.com/albums/1/photos";
+
+        getPhotos(photos).then(res => {
+            createGallery(res);
+        });
+
+
+
+        function createGallery(data) {
+            data.forEach(item => {
+                console.log(item);
+
+                //create div
+                // create image
+                // append image to the dive
+                // create p element 
+                // put tile item.title in innerHTML
+                // add p elem to div
+                // create a lelem 
+                // append to div
+
+
+                //finally append div to body
+
+                let image = document.createElement('img');
+                image.src = item.thumbnailUrl;
+
+
+                document.body.append(image)
+
+            })
+        }
+
+    </script>
+
+</body>
+
+</html>
