@@ -1,0 +1,14 @@
+{
+  "name": "108_node_project",
+  "version": "1.0.0",
+  "description": "this is a training video demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "no test "
+  },
+  "author": "Ganesh Pilli",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
